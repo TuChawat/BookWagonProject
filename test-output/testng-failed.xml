@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default Suite]">
+  <test thread-count="5" name="BooksWagon(failed)">
+    <classes>
+      <class name="BooksWagonTest">
+        <methods>
+          <include name="startTest"/>
+          <include name="setup"/>
+          <include name="endTest"/>
+          <include name="Search_Book"/>
+        </methods>
+      </class> <!-- BooksWagonTest -->
+    </classes>
+  </test> <!-- BooksWagon(failed) -->
+</suite> <!-- Failed suite [Default Suite] -->
