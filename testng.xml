@@ -5,6 +5,21 @@
         <listener class-name="com.bridgelabz.selenium.listner.TestNGListner"></listener>
     </listeners>
     <test verbose="2" preserve-order="true"
+          name="C:/Users/Admin/BooksWagon/src/test/java/com/bridgelabz/selenium/BooksWagonTest.java">
+        <parameter name="browser" value="chrome"></parameter>
+        <classes>
+            <class name="com.bridgelabz.selenium.BooksWagonTest">
+                <methods>
+                    <include name="Login_Bookswagon"/>
+                    <include name="Search_Book"/>
+                    <include name="placeOrder"/>
+                    <include name="shippingAddress"/>
+                    <include name="paymentMethod"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test verbose="2" preserve-order="true"
       name="C:/Users/Admin/BooksWagon/src/test/java/com/bridgelabz/selenium/BooksWagonNegativeTest.java">
     <parameter name="browser" value="chrome"></parameter>
     <classes>
