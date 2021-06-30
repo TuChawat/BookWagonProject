@@ -30,9 +30,9 @@ public class Login_Bookswagon {
 
     public void loggedin() {
         Login.click();
-        String username = Library.getProperty(CONFIG_PATH, "username");
+        String username = Library.getProperty(IConstant.CONFIG_PATH, "username");
         Name.sendKeys(username);
-        String password = Library.getProperty(CONFIG_PATH, "password");
+        String password = Library.getProperty(IConstant.CONFIG_PATH, "password");
         Pass.sendKeys(password);
         Button.click();
     }
