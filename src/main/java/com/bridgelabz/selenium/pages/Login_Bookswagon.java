@@ -28,9 +28,11 @@ public class Login_Bookswagon {
     public Login_Bookswagon(WebDriver driver) { PageFactory.initElements(Base.driver, this);
     }
 
-    public void loggedin(String username, String password) {
+    public void loggedin() {
         Login.click();
+        String username = Library.getProperty(CONFIG_PATH, "username");
         Name.sendKeys(username);
+        String password = Library.getProperty(CONFIG_PATH, "password");
         Pass.sendKeys(password);
         Button.click();
     }
