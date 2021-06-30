@@ -25,10 +25,10 @@ public class BooksWagonNegativeTest extends Base {
     public Search_Book Search;
     public Place_OrderNegative Order;
 
-    @Test
-    public void Login_Bookswagon() throws IOException {
+    @Test(dataProvider="testdata")
+    public void Login_Bookswagon(String username, String password) throws IOException {
         login = new Login_Bookswagon(driver);
-        login.loggedin();
+        login.loggedin(username, password);
         String accountxpath = Library.getProperty(IConstant.CONFIG_PATH, "accountxpath");
         String Account = driver.findElement(By.xpath(accountxpath)).getText();
         Assert.assertEquals("My Account", Account);
@@ -75,17 +75,17 @@ public class BooksWagonNegativeTest extends Base {
         }
     }
 
-//    @DataProvider(name="testdata")
-//    public Object[][] testDataExample(){
-//        ReadExcelFile configuration = new ReadExcelFile("C:\\Users\\Admin\\BooksWagon\\Bookswagon.xlsx");
-//        int rows = configuration.getRowCount(0);
-//        Object[][]signin_credentials = new Object[rows][2];
-//
-//        for(int i=0;i<rows;i++)
-//        {
-//            signin_credentials[i][0] = configuration.getData(0, i, 0);
-//            signin_credentials[i][1] = configuration.getData(0, i, 1);
-//        }
-//        return signin_credentials;
-//    }
+    @DataProvider(name="testdata")
+    public Object[][] testDataExample(){
+        ReadExcelFile configuration = new ReadExcelFile("C:\\Users\\Admin\\BooksWagon\\Bookswagon.xlsx");
+        int rows = configuration.getRowCount(0);
+        Object[][]signin_credentials = new Object[rows][2];
+
+        for(int i=0;i<rows;i++)
+        {
+            signin_credentials[i][0] = configuration.getData(0, i, 0);
+            signin_credentials[i][1] = configuration.getData(0, i, 1);
+        }
+        return signin_credentials;
+    }
 }
