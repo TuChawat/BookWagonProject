@@ -31,5 +31,40 @@
             </methods>
         </class>
     </classes>
-</test>
+    </test>
+    <test verbose="2" preserve-order="true"
+          name="C:/Users/Admin/BooksWagon/src/test/java/com/bridgelabz/selenium/BooksWagonOutOfStockTest.java">
+        <parameter name="browser" value="chrome"></parameter>
+        <classes>
+            <class name="com.bridgelabz.selenium.BooksWagonOutOfStockTest">
+                <methods>
+                    <include name="Login_Bookswagon"/>
+                    <include name="Search_BookOutOfStock"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test verbose="2" preserve-order="true"
+          name="C:/Users/Admin/BooksWagon/src/test/java/com/bridgelabz/selenium/BooksWagonLoginNegativeTest.java">
+        <parameter name="browser" value="chrome"></parameter>
+        <classes>
+            <class name="com.bridgelabz.selenium.BooksWagonLoginNegativeTest">
+                <methods>
+                    <include name="Login_Bookswagon"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test verbose="2" preserve-order="true"
+          name="C:/Users/Admin/BooksWagon/src/test/java/com/bridgelabz/selenium/BooksWagonLangaugeTest.java">
+        <parameter name="browser" value="chrome"></parameter>
+        <classes>
+            <class name="com.bridgelabz.selenium.BooksWagonLangaugeTest">
+                <methods>
+                    <include name="Login_Bookswagon"/>
+                    <include name="Search_Book"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
 </suite>
